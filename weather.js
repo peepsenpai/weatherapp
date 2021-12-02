@@ -37,7 +37,7 @@ function weatherReport(city) {
 
 // show weather 
 function showWeather(weather) {
-
+    console.log(weather);
     const errormsg = document.getElementById('errormsg');
     if (weather.cod == "404") {
         errormsg.classList.add('active')
@@ -52,8 +52,8 @@ function showWeather(weather) {
         let currentDate = new Date()
         date.innerText = getdate(currentDate);
         function getdate(currentDate) {
-            let days = ['Sunday', 'Monday', 'Tuesday', 'Thrusday', 'Friday', 'Saturday'];
-            let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Nov', 'Dec']
+            let days = ['Sunday', 'Monday', 'Tuesday','Wednesday', 'Thrusday', 'Friday', 'Saturday'];
+            let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept','Oct', 'Nov', 'Dec']
             let year = currentDate.getFullYear();
             let month = months[currentDate.getMonth()];
             let mainDate = currentDate.getDate();
